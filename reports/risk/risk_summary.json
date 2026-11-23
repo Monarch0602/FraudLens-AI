@@ -1,0 +1,10 @@
+{
+    "total_transactions": 1440,
+    "flagged_transactions": 41,
+    "flagged_percentage": 2.85,
+    "average_risk_score": 5.88,
+    "critical": 41,
+    "high": 22,
+    "medium": 44,
+    "low": 1333
+}

@@ -1,0 +1,14 @@
+{
+    "model": "Extra Trees",
+    "selection_metric": "validation_pr_auc",
+    "validation_pr_auc": 0.8007886710499517,
+    "validation_f1": 0.7397260273972602,
+    "threshold": 0.85,
+    "test_pr_auc": 0.7049982857956164,
+    "test_f1": 0.7407407407407407,
+    "test_precision": 0.7317073170731707,
+    "test_recall": 0.75,
+    "test_roc_auc": 0.9886071428571429,
+    "test_false_positives": 11,
+    "test_false_negatives": 10
+}

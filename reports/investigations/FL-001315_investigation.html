@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FraudLens Investigation Report</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #0b1120;
+    color: #e5e7eb;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 35px;
+}
+
+.container {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.header {
+    padding: 30px;
+    background: #111827;
+    border: 1px solid #273449;
+    border-radius: 14px;
+    margin-bottom: 24px;
+}
+
+.brand {
+    color: #38bdf8;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.header h1 {
+    margin: 12px 0;
+    font-size: 30px;
+}
+
+.muted {
+    color: #9ca3af;
+    line-height: 1.6;
+}
+
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.metric {
+    background: #111827;
+    border: 1px solid #273449;
+    border-radius: 12px;
+    padding: 22px;
+}
+
+.metric-label {
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+.metric-value {
+    font-size: 27px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.card {
+    background: #111827;
+    border: 1px solid #273449;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 19px;
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 13px;
+    text-align: left;
+    border-bottom: 1px solid #273449;
+}
+
+th {
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.risk-badge {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    background: #ef4444;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 12px;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 12px;
+    }
+
+    .metrics {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+        color: black;
+        padding: 0;
+    }
+
+    .header, .card, .metric {
+        background: white;
+        color: black;
+        border: 1px solid #ddd;
+    }
+
+    .muted, .metric-label, th {
+        color: #555;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+    <div class="brand">FRAUDLENS AI</div>
+    <h1>Transaction Investigation Report</h1>
+
+    <p>Case ID: <strong>FL-001315</strong></p>
+
+    <p>
+        Status:
+        <strong>Pending</strong>
+    </p>
+
+    <p class="muted">
+        Generated: 2026-11-23T21:11:33.436391
+    </p>
+</div>
+
+<div class="metrics">
+
+    <div class="metric">
+        <div class="metric-label">Fraud Probability</div>
+        <div class="metric-value">99.93%</div>
+    </div>
+
+    <div class="metric">
+        <div class="metric-label">Risk Score</div>
+        <div class="metric-value">100/100</div>
+    </div>
+
+    <div class="metric">
+        <div class="metric-label">Risk Classification</div>
+        <div class="metric-value">
+            <span class="risk-badge">CRITICAL</span>
+        </div>
+    </div>
+
+</div>
+
+<section class="card">
+    <h2>Observed Transaction Evidence</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Evidence Field</th>
+                <th>Observed Value</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            
+            <tr>
+                <td>Transaction amount</td>
+                <td>236.14739999999958</td>
+            </tr>
+            
+            <tr>
+                <td>Transaction category</td>
+                <td>es_leisure</td>
+            </tr>
+            
+            <tr>
+                <td>Transaction time step</td>
+                <td>158291</td>
+            </tr>
+            
+            <tr>
+                <td>Customer age group</td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td>Recorded gender category</td>
+                <td>M</td>
+            </tr>
+            
+        </tbody>
+    </table>
+</section>
+
+<section class="card">
+    <h2>Investigation Reasoning</h2>
+    <ul>
+        <li>The model assigned a fraud probability of 99.93% and classified the transaction as CRITICAL risk.</li><li>The observed transaction amount is 236.14739999999958.</li><li>The recorded transaction category is es_leisure.</li>
+    </ul>
+</section>
+
+
+            <section class="card">
+                <h2>Model Explainability — SHAP</h2>
+                <p class="muted">
+                    Positive values increase the model's fraud prediction;
+                    negative values decrease it. SHAP values describe
+                    model behavior, not proof of fraudulent activity.
+                </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Contribution</th>
+                            <th>Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+            <tr>
+                <td>is_high_amount</td>
+                <td style="color:#ef4444;font-weight:bold;">
+                    +0.105241
+                </td>
+                <td>Increases predicted fraud probability</td>
+            </tr>
+            
+            <tr>
+                <td>category_frequency</td>
+                <td style="color:#ef4444;font-weight:bold;">
+                    +0.103229
+                </td>
+                <td>Increases predicted fraud probability</td>
+            </tr>
+            
+            <tr>
+                <td>Category: transportation</td>
+                <td style="color:#ef4444;font-weight:bold;">
+                    +0.094149
+                </td>
+                <td>Increases predicted fraud probability</td>
+            </tr>
+            
+            <tr>
+                <td>amount_zscore</td>
+                <td style="color:#ef4444;font-weight:bold;">
+                    +0.057765
+                </td>
+                <td>Increases predicted fraud probability</td>
+            </tr>
+            
+            <tr>
+                <td>category_amount_mean</td>
+                <td style="color:#ef4444;font-weight:bold;">
+                    +0.055292
+                </td>
+                <td>Increases predicted fraud probability</td>
+            </tr>
+            
+            <tr>
+                <td>amount</td>
+                <td style="color:#ef4444;font-weight:bold;">
+                    +0.037491
+                </td>
+                <td>Increases predicted fraud probability</td>
+            </tr>
+            
+            <tr>
+                <td>amount_log</td>
+                <td style="color:#ef4444;font-weight:bold;">
+                    +0.024824
+                </td>
+                <td>Increases predicted fraud probability</td>
+            </tr>
+            
+            <tr>
+                <td>amount_percentile</td>
+                <td style="color:#ef4444;font-weight:bold;">
+                    +0.021483
+                </td>
+                <td>Increases predicted fraud probability</td>
+            </tr>
+            
+            <tr>
+                <td>Category: leisure</td>
+                <td style="color:#ef4444;font-weight:bold;">
+                    +0.010820
+                </td>
+                <td>Increases predicted fraud probability</td>
+            </tr>
+            
+            <tr>
+                <td>Category: sportsandtoys</td>
+                <td style="color:#22c55e;font-weight:bold;">
+                    -0.007457
+                </td>
+                <td>Decreases predicted fraud probability</td>
+            </tr>
+            
+            <tr>
+                <td>Category: food</td>
+                <td style="color:#ef4444;font-weight:bold;">
+                    +0.005751
+                </td>
+                <td>Increases predicted fraud probability</td>
+            </tr>
+            
+            <tr>
+                <td>step_scaled</td>
+                <td style="color:#22c55e;font-weight:bold;">
+                    -0.005348
+                </td>
+                <td>Decreases predicted fraud probability</td>
+            </tr>
+            
+            <tr>
+                <td>Category: hyper</td>
+                <td style="color:#22c55e;font-weight:bold;">
+                    -0.002935
+                </td>
+                <td>Decreases predicted fraud probability</td>
+            </tr>
+            
+            <tr>
+                <td>Category: health</td>
+                <td style="color:#22c55e;font-weight:bold;">
+                    -0.001983
+                </td>
+                <td>Decreases predicted fraud probability</td>
+            </tr>
+            
+            <tr>
+                <td>Category: fashion</td>
+                <td style="color:#ef4444;font-weight:bold;">
+                    +0.001413
+                </td>
+                <td>Increases predicted fraud probability</td>
+            </tr>
+            
+            <tr>
+                <td>Category: tech</td>
+                <td style="color:#ef4444;font-weight:bold;">
+                    +0.000875
+                </td>
+                <td>Increases predicted fraud probability</td>
+            </tr>
+            
+            <tr>
+                <td>Category: hotelservices</td>
+                <td style="color:#22c55e;font-weight:bold;">
+                    -0.000830
+                </td>
+                <td>Decreases predicted fraud probability</td>
+            </tr>
+            
+            <tr>
+                <td>category_amount_std</td>
+                <td style="color:#ef4444;font-weight:bold;">
+                    +0.000606
+                </td>
+                <td>Increases predicted fraud probability</td>
+            </tr>
+            
+            <tr>
+                <td>Category: travel</td>
+                <td style="color:#22c55e;font-weight:bold;">
+                    -0.000569
+                </td>
+                <td>Decreases predicted fraud probability</td>
+            </tr>
+            
+            <tr>
+                <td>Category: home</td>
+                <td style="color:#22c55e;font-weight:bold;">
+                    -0.000438
+                </td>
+                <td>Decreases predicted fraud probability</td>
+            </tr>
+            
+            <tr>
+                <td>Category: wellnessandbeauty</td>
+                <td style="color:#22c55e;font-weight:bold;">
+                    -0.000405
+                </td>
+                <td>Decreases predicted fraud probability</td>
+            </tr>
+            
+            <tr>
+                <td>Category: barsandrestaurants</td>
+                <td style="color:#ef4444;font-weight:bold;">
+                    +0.000389
+                </td>
+                <td>Increases predicted fraud probability</td>
+            </tr>
+            
+            <tr>
+                <td>Category: otherservices</td>
+                <td style="color:#22c55e;font-weight:bold;">
+                    -0.000239
+                </td>
+                <td>Decreases predicted fraud probability</td>
+            </tr>
+            
+            <tr>
+                <td>Category: contents</td>
+                <td style="color:#ef4444;font-weight:bold;">
+                    +0.000189
+                </td>
+                <td>Increases predicted fraud probability</td>
+            </tr>
+            
+                    </tbody>
+                </table>
+            </section>
+            
+
+<section class="card">
+    <h2>Recommended Analyst Actions</h2>
+    <ol>
+        <li>Prioritize this case for immediate analyst review.</li><li>Verify the transaction against available authorized records.</li><li>Check whether the transaction can be confirmed by the customer.</li><li>Document the investigation outcome and supporting evidence.</li>
+    </ol>
+</section>
+
+<section class="card">
+    <h2>Limitations & Disclaimer</h2>
+    <ul>
+        <li>A fraud probability is a model estimate, not a confirmed finding.</li><li>SHAP values explain model behavior and do not establish causation.</li><li>Only available transaction data is included in this report.</li><li>Recommended actions require analyst verification.</li>
+    </ul>
+
+    <p class="muted">
+        This report is decision-support material. A model prediction does not
+        independently establish fraud. Final determinations must be made by
+        authorized personnel following verification of available evidence.
+    </p>
+</section>
+
+<div class="footer">
+    FraudLens AI &bull; Explainable Transaction Risk Intelligence
+    <br>
+    Engine Version: 1.0
+</div>
+
+</div>
+</body>
+</html>

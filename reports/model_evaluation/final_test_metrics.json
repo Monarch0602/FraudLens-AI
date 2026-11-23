@@ -1,0 +1,29 @@
+{
+    "model": "Random Forest",
+    "threshold": 0.9,
+    "validation_f1": 0.7323943661971831,
+    "validation_pr_auc": 0.7455854738273057,
+    "test_metrics": {
+        "accuracy": 0.9847222222222223,
+        "balanced_accuracy": 0.8585714285714285,
+        "precision": 0.725,
+        "recall": 0.725,
+        "f1_score": 0.725,
+        "roc_auc": 0.9868482142857142,
+        "pr_auc": 0.6489100603912088,
+        "threshold": 0.9,
+        "total_samples": 1440.0,
+        "fraud_samples": 40.0,
+        "legitimate_samples": 1400.0,
+        "true_positives": 29.0,
+        "true_negatives": 1389.0,
+        "false_positives": 11.0,
+        "false_negatives": 11.0
+    },
+    "confusion_counts": {
+        "true_positives": 29,
+        "true_negatives": 1389,
+        "false_positives": 11,
+        "false_negatives": 11
+    }
+}

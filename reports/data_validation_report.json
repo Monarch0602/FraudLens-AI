@@ -1,0 +1,87 @@
+{
+    "dataset_overview": {
+        "rows": 7200,
+        "columns": 6,
+        "memory_usage_mb": 0.45
+    },
+    "missing_values": {},
+    "total_missing_values": 0,
+    "duplicate_rows": 0,
+    "data_types": {
+        "step": "int64",
+        "age": "str",
+        "gender": "str",
+        "category": "str",
+        "amount": "float64",
+        "fraud": "int64"
+    },
+    "numeric_features": [
+        "step",
+        "amount",
+        "fraud"
+    ],
+    "categorical_features": [
+        "age",
+        "gender",
+        "category"
+    ],
+    "numeric_statistics": {
+        "step": {
+            "count": 7200.0,
+            "mean": 296228.0384722222,
+            "std": 172094.97208294875,
+            "min": 13.0,
+            "25%": 145611.25,
+            "50%": 295031.5,
+            "75%": 445221.5,
+            "max": 594622.0
+        },
+        "amount": {
+            "count": 7200.0,
+            "mean": 36.98158705555555,
+            "std": 40.56935475495678,
+            "min": 1.0997999999999999,
+            "25%": 14.43,
+            "50%": 28.02,
+            "75%": 44.215,
+            "max": 236.14739999999958
+        },
+        "fraud": {
+            "count": 7200.0,
+            "mean": 0.027777777777777776,
+            "std": 0.16434696291039197,
+            "min": 0.0,
+            "25%": 0.0,
+            "50%": 0.0,
+            "75%": 0.0,
+            "max": 1.0
+        }
+    },
+    "target_column": "fraud",
+    "target_distribution": {
+        "0": 7000,
+        "1": 200
+    },
+    "target_percentage": {
+        "0": 97.2222,
+        "1": 2.7778
+    },
+    "class_imbalance_ratio": 35.0,
+    "class_imbalance_detected": true,
+    "constant_columns": [],
+    "high_cardinality_columns": [],
+    "amount_analysis": {
+        "amount": {
+            "min": 1.0997999999999999,
+            "max": 236.14739999999958,
+            "mean": 36.98158705555555,
+            "median": 28.02,
+            "negative_values": 0,
+            "zero_values": 0
+        }
+    },
+    "warnings": [
+        "Severe class imbalance detected."
+    ],
+    "validation_status": "WARNING"
+}

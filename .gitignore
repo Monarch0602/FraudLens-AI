@@ -1,0 +1,39 @@
+
+# Python environments
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Secrets
+.env
+.streamlit/secrets.toml
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated datasets
+data/processed/
+
+# Model artifacts
+models/saved/*.pkl
+
+# Generated interactive HTML reports
+reports/figures/*.html
+
+# Logs and temporary files
+logs/
+*.log
+
+# Test caches
+.pytest_cache/
+.mypy_cache/

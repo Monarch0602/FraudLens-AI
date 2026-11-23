@@ -1,0 +1,241 @@
+{
+    "fraud_distribution": {
+        "fraud_count": 200,
+        "legitimate_count": 7000,
+        "fraud_percentage": 2.7778,
+        "legitimate_percentage": 97.2222
+    },
+    "amount_analysis": {
+        "fraud_amount": {
+            "mean": 188.13,
+            "median": 236.15,
+            "maximum": 236.15
+        },
+        "legitimate_amount": {
+            "mean": 32.66,
+            "median": 27.39,
+            "maximum": 236.15
+        }
+    },
+    "category_analysis": [
+        {
+            "category": "es_leisure",
+            "transaction_count": 13,
+            "fraud_count": 13,
+            "fraud_rate": 100.0,
+            "average_amount": 229.7576
+        },
+        {
+            "category": "es_travel",
+            "transaction_count": 18,
+            "fraud_count": 17,
+            "fraud_rate": 94.4444,
+            "average_amount": 231.8187
+        },
+        {
+            "category": "es_sportsandtoys",
+            "transaction_count": 76,
+            "fraud_count": 50,
+            "fraud_rate": 65.7895,
+            "average_amount": 157.2517
+        },
+        {
+            "category": "es_otherservices",
+            "transaction_count": 10,
+            "fraud_count": 6,
+            "fraud_rate": 60.0,
+            "average_amount": 149.649
+        },
+        {
+            "category": "es_hotelservices",
+            "transaction_count": 31,
+            "fraud_count": 17,
+            "fraud_rate": 54.8387,
+            "average_amount": 172.7562
+        },
+        {
+            "category": "es_health",
+            "transaction_count": 243,
+            "fraud_count": 59,
+            "fraud_rate": 24.2798,
+            "average_amount": 126.6047
+        },
+        {
+            "category": "es_home",
+            "transaction_count": 24,
+            "fraud_count": 5,
+            "fraud_rate": 20.8333,
+            "average_amount": 120.6883
+        },
+        {
+            "category": "es_tech",
+            "transaction_count": 39,
+            "fraud_count": 7,
+            "fraud_rate": 17.9487,
+            "average_amount": 132.8529
+        },
+        {
+            "category": "es_hyper",
+            "transaction_count": 80,
+            "fraud_count": 10,
+            "fraud_rate": 12.5,
+            "average_amount": 46.7882
+        },
+        {
+            "category": "es_wellnessandbeauty",
+            "transaction_count": 198,
+            "fraud_count": 12,
+            "fraud_rate": 6.0606,
+            "average_amount": 66.1671
+        },
+        {
+            "category": "es_barsandrestaurants",
+            "transaction_count": 89,
+            "fraud_count": 2,
+            "fraud_rate": 2.2472,
+            "average_amount": 43.8418
+        },
+        {
+            "category": "es_fashion",
+            "transaction_count": 97,
+            "fraud_count": 2,
+            "fraud_rate": 2.0619,
+            "average_amount": 59.7808
+        },
+        {
+            "category": "es_contents",
+            "transaction_count": 13,
+            "fraud_count": 0,
+            "fraud_rate": 0.0,
+            "average_amount": 55.17
+        },
+        {
+            "category": "es_food",
+            "transaction_count": 294,
+            "fraud_count": 0,
+            "fraud_rate": 0.0,
+            "average_amount": 35.216
+        },
+        {
+            "category": "es_transportation",
+            "transaction_count": 5975,
+            "fraud_count": 0,
+            "fraud_rate": 0.0,
+            "average_amount": 27.422
+        }
+    ],
+    "demographic_analysis": {
+        "age": [
+            {
+                "age": "0",
+                "transaction_count": 40,
+                "fraud_count": 2,
+                "fraud_rate": 5.0,
+                "average_amount": 49.4689
+            },
+            {
+                "age": "1",
+                "transaction_count": 713,
+                "fraud_count": 19,
+                "fraud_rate": 2.6648,
+                "average_amount": 35.6228
+            },
+            {
+                "age": "2",
+                "transaction_count": 2333,
+                "fraud_count": 67,
+                "fraud_rate": 2.8718,
+                "average_amount": 37.2287
+            },
+            {
+                "age": "3",
+                "transaction_count": 1718,
+                "fraud_count": 40,
+                "fraud_rate": 2.3283,
+                "average_amount": 37.2793
+            },
+            {
+                "age": "4",
+                "transaction_count": 1279,
+                "fraud_count": 46,
+                "fraud_rate": 3.5966,
+                "average_amount": 36.198
+            },
+            {
+                "age": "5",
+                "transaction_count": 792,
+                "fraud_count": 19,
+                "fraud_rate": 2.399,
+                "average_amount": 37.5475
+            },
+            {
+                "age": "6",
+                "transaction_count": 314,
+                "fraud_count": 7,
+                "fraud_rate": 2.2293,
+                "average_amount": 36.7009
+            },
+            {
+                "age": "U",
+                "transaction_count": 11,
+                "fraud_count": 0,
+                "fraud_rate": 0.0,
+                "average_amount": 39.117
+            }
+        ],
+        "gender": [
+            {
+                "gender": "E",
+                "transaction_count": 11,
+                "fraud_count": 0,
+                "fraud_rate": 0.0,
+                "average_amount": 39.117
+            },
+            {
+                "gender": "F",
+                "transaction_count": 3972,
+                "fraud_count": 133,
+                "fraud_rate": 3.3484,
+                "average_amount": 37.8429
+            },
+            {
+                "gender": "M",
+                "transaction_count": 3212,
+                "fraud_count": 67,
+                "fraud_rate": 2.0859,
+                "average_amount": 35.919
+            },
+            {
+                "gender": "U",
+                "transaction_count": 5,
+                "fraud_count": 0,
+                "fraud_rate": 0.0,
+                "average_amount": 30.644
+            }
+        ]
+    },
+    "temporal_analysis": {
+        "total_steps": 7200,
+        "first_step": 13,
+        "last_step": 594622,
+        "peak_transaction_step": 13,
+        "peak_fraud_step": 1481
+    },
+    "correlation_analysis": {
+        "step": {
+            "step": 1.0,
+            "amount": -0.0077,
+            "fraud": -0.0232
+        },
+        "amount": {
+            "step": -0.0077,
+            "amount": 1.0,
+            "fraud": 0.6298
+        },
+        "fraud": {
+            "step": -0.0232,
+            "amount": 0.6298,
+            "fraud": 1.0
+        }
+    }
+}

@@ -1,0 +1,68 @@
+{
+    "report_metadata": {
+        "engine_version": "1.0",
+        "generated_at": "2026-11-23T21:11:33.436391",
+        "case_id": "FL-001315"
+    },
+    "case_information": {
+        "case_id": "FL-001315",
+        "status": "Pending"
+    },
+    "risk_assessment": {
+        "tier": "CRITICAL",
+        "probability": 0.9993135348148199,
+        "risk_score": 100,
+        "review_flag": 1,
+        "recommended_action": "Immediate investigation"
+    },
+    "observed_evidence": [
+        {
+            "type": "OBSERVED_DATA",
+            "field": "amount",
+            "description": "Transaction amount",
+            "value": 236.14739999999958
+        },
+        {
+            "type": "OBSERVED_DATA",
+            "field": "category",
+            "description": "Transaction category",
+            "value": "es_leisure"
+        },
+        {
+            "type": "OBSERVED_DATA",
+            "field": "step",
+            "description": "Transaction time step",
+            "value": 158291
+        },
+        {
+            "type": "OBSERVED_DATA",
+            "field": "age",
+            "description": "Customer age group",
+            "value": "2"
+        },
+        {
+            "type": "OBSERVED_DATA",
+            "field": "gender",
+            "description": "Recorded gender category",
+            "value": "M"
+        }
+    ],
+    "shap_explanations": [],
+    "reasoning": [
+        "The model assigned a fraud probability of 99.93% and classified the transaction as CRITICAL risk.",
+        "The observed transaction amount is 236.14739999999958.",
+        "The recorded transaction category is es_leisure."
+    ],
+    "recommended_actions": [
+        "Prioritize this case for immediate analyst review.",
+        "Verify the transaction against available authorized records.",
+        "Check whether the transaction can be confirmed by the customer.",
+        "Document the investigation outcome and supporting evidence."
+    ],
+    "limitations": [
+        "A fraud probability is a model estimate, not a confirmed finding.",
+        "SHAP values explain model behavior and do not establish causation.",
+        "Only available transaction data is included in this report.",
+        "Recommended actions require analyst verification."
+    ]
+}
